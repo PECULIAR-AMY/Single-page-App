@@ -18,8 +18,18 @@ export default function App() {
         <SafeAreaView style= {styles.search}>
           <Text > Search History</Text>
           <Text > view</Text>
+        <View>
+        <Text>others</Text>
+        <Text>women</Text>
+        <Text>men clo</Text>
+        <Text>electronics</Text>
+        <Text>shirts</Text>
+        <Text>discounted items</Text>
+        <Text>Fresh vegetables</Text>
+        </View>
         </SafeAreaView>
     </ScrollView>
+    
    
   );
 }
