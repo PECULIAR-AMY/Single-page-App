@@ -1,6 +1,13 @@
 import { StatusBar } from 'expo-status-bar';
 import { SafeAreaView, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 import Ionicons from '@expo/vector-icons/'
+import { Image } from 'react-native';
+const fruitLogo = require ('./assets/Fruits.png')
+const eggLogo = require('./assets/Eggs.png')
+const meatLogo = require('./assets/meat.png')
+const pomLogo = require('./assets/pomogranate.png')
+const oliveLogo = require('./assets/Olive.png')
+const desertLogo = require('./assets/deserts.png')
 
 
 
@@ -28,6 +35,26 @@ export default function App() {
         <Text>Fresh vegetables</Text>
         </View>
         </SafeAreaView>
+        <ToucheableOpacity>
+        <View>
+        <Image source={fruitLogo} />
+        <View>
+        <Image source={oliveLogo} />
+        </View>
+        <View>
+        <Image source={meatLogo} />
+        </View>
+        <View>
+        <Image source={desertLogo} />
+        </View>
+        <View>
+        <Image source={pomLogo} />
+        </View>
+        <View>
+        <Image source={eggLogo} />
+        </View>
+        </View >
+        </ToucheableOpacity>
     </ScrollView>
     
    
