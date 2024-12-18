@@ -1,21 +1,27 @@
 import { StatusBar } from 'expo-status-bar';
-import { SafeAreaView, ScrollView, StyleSheet, Text, TextInput, View, Image } from 'react-native'; import Ionicons from '@expo/vector-icons/'
-const fruitLogo = require ('./assets/Fruits.png')
- const eggLogo = require('./assets/Eggs.png')
- const meatLogo = require('./assets/meat.png')
- const pomLogo = require('./assets/pomogranate.png')
- const oliveLogo = require('./assets/Olive.png')
- const desertLogo = require('./assets/deserts.png')
+import { SafeAreaView, ScrollView, StyleSheet, Text, TextInput, View, Image, Pressable } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
+import Icon from 'react-native-vector-icons/FontAwesome';
+
+const fruitLogo = require('./assets/Fruits.png');
+const eggLogo = require('./assets/Eggs.png');
+const meatLogo = require('./assets/meat.png');
+const pomLogo = require('./assets/pomogranate.png');
+const oliveLogo = require('./assets/Olive.png');
+const desertLogo = require('./assets/deserts.png');
+
+
 export default function App() {
   return (
     <ScrollView>
       <SafeAreaView styles = {styles.container}>
+           <View styles = {styles.inputContainer}>
+           <Icon  name='search' size= {20} color= 'gold' flexDirection = 'left' style= {styles.icon}/>
             <TextInput
             style= {styles.input}
-            placeholder="Rice"
-            />
+            placeholder="Rice" color='#FF882E5E' />
+           </View>
         </SafeAreaView>
-
         <SafeAreaView style= {styles.search}>
           <View style = {styles.history}>
           <Text>Search History</Text>
@@ -87,8 +93,69 @@ export default function App() {
           <Text>Meat and fish</Text>
         </View>
          </View>
-      
-      
+
+         <View style={styles.icon}>
+          <Pressable style = {styles.button}>
+            <Icon 
+            name ='plus'
+            size ={28}
+            color = 'white'
+            backgroundColor= '#087319'
+            width = {45.67}
+            height = {45.67}
+           borderRadius = {17}
+            />
+          </Pressable>
+          <Pressable style= {styles.button}>
+            <Icon 
+            name ='plus'
+            size ={28}
+            color = 'white'
+            backgroundColor='#087319'
+            width = {45.67}
+            height = {45.67}
+           borderRadius = {17}
+            />
+          </Pressable>
+         </View>
+
+         <View>
+         <View>
+         <Icon 
+            name ='home'
+            size ={28}
+            color = 'black' />
+            <Text>Home</Text>
+        </View> 
+        <View>
+         <Icon 
+            name ='search'
+            size ={28}
+            color = 'black' />
+            <Text>search</Text>
+        </View> 
+        <View>
+         <Icon 
+            name ='trend'
+            size ={28}
+            color = 'black' />
+            <Text>Trend</Text>
+        </View> 
+        <View>
+         <Icon 
+            name ='book'
+            size ={28}
+            color = 'black' />
+            <Text>Order</Text>
+        </View> 
+        <View>
+         <Icon 
+            name ='person'
+            size ={28}
+            color = 'black' />
+            <Text>Profile</Text>
+        </View> 
+         </View>
       
        </SafeAreaView>
     </ScrollView>
@@ -101,30 +168,42 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: '#fff',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'center'
+  },
 
+  inputContainer: {
+   flexDirection: 'row',
+   alignItems: 'center',
+   borderWidth: 1,
+   borderColor: 'blue',
+   borderRadius: 8,
+   paddingHorizontal: 10,
+   backgroundColor:'blue'  
   },
-  input: {
-    width: 286.72,
-    height: 51,
-    Top:109,
-    Left: 30,
-    backgroundColor: 'grey',
-    marginTop: 20,
-    borderRadius:10,
-  },
+  // input: {
+  //   width: 286.72,
+  //   height: 51,
+  //   top:109,
+  //   left: 30,
+  //   backgroundColor: 'white',
+  //   marginTop: 1,
+  //   borderRadius:10,
+  //   borderColor: 'blue',
+  //   borderwidth: 2,
+  //   backgroundColor: 'blue'
+    
+  // },
 
   search: {
     marginTop: 30,
     backgroundColor: 'yellow',
-  },
-  search:{
     width: 372,
     height: 100,
     top: 50,
     left: 28,
-
-  }, 
+    marginTop:80,
+  },
+  
   history: {
   flexDirection: 'row',
   alignItems: 'stretch',
@@ -137,7 +216,7 @@ const styles = StyleSheet.create({
   others:{
     width: 371.03,
     height: 63,
-    Top:237,
+    top:237,
     left: 28.97,
     flexWrap: 'wrap',
     flexDirection: 'row'
@@ -151,8 +230,8 @@ const styles = StyleSheet.create({
   card:{
     width: 174.5,
     height: 189.11,
-    Radius: 18,
-    border: 1,
+    borderRadius: 18,
+    borderwidth: 1,
     backgroundColor:'blue'
   }, 
   box:{
