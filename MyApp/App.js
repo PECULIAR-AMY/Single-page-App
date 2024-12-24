@@ -18,13 +18,20 @@ export default function App() {
           <TextInput style={styles.input} placeholder="Search" placeholderTextColor='gold' />
         </View>
           
-
-          <View class= {styles.searchContainer}>
-            <View styles={styles.search}>
-             <Text>Search History</Text>
-             <Text>clear</Text>
+            <View style={styles.gridSearch}>
+             <Text style= {styles.bigText}>Search History</Text>
+             <Text style = {[styles.clearText, {color: '#FF882EC2'}]}>clear</Text>
             </View>
-          </View>
+            <View style ={styles.gridOthers}>
+              <Text>Others</Text>
+              <Text>women</Text>
+              <Text>Men Clo</Text>
+              <Text>Electronics</Text>
+              <Text>discounted items</Text>
+              <Text>Fresh Vegetables</Text>
+              <Text>shirts</Text>
+            </View>
+          
         
 
         <View style={styles.gridContainer}>
@@ -109,6 +116,8 @@ const styles = StyleSheet.create({
     borderColor: 'blue',
     paddingHorizontal: 10,
     marginBottom: 20,
+    marginLeft: 20,
+    marginRight: 10
   },
   input: {
     flex: 1,
@@ -173,7 +182,8 @@ const styles = StyleSheet.create({
    marginRight: 10,
    gap: 140,
    position: 'absolute',
-   marginTop: 680
+   marginTop: 850,
+   marginRight: 10
   
    
   },
@@ -185,8 +195,26 @@ const styles = StyleSheet.create({
     borderRadius: 17,
     justifyContent: 'center',
     alignItems: 'center'
-  
+  },
+  gridSearch: {
+    flexDirection: 'row',
+    gap:180,
+    marginBottom: 20,
+    marginTop: 20,
+    marginLeft:20,
+    marginRight: 10
+  },
+  bigText: {
+   fontSize: 24,
+   font:'poppins',
+   fontWeight: 500,
+  },
 
-
+  gridOthers: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    gap:20,
+    marginBottom: 50,
+    marginLeft: 20
   }
 });
